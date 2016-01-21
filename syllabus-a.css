@@ -1,0 +1,52 @@
+header > h1 {
+  text-align: center;
+}
+
+header > p {
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+  display: inline;
+}
+
+dd {
+  display: inline;
+  text-align: left;
+}
+
+dd::after {
+  content: "";
+  display: block;
+  margin-bottom: 10px;
+}
+
+aside {
+  margin-left: 20px;
+}
+
+aside > dl {
+  width: 400px;
+  border: 1px solid grey;
+  float: right;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+aside > dl > dt, aside > dl > dd {
+  display: block;
+  width: 200px;
+  height: 20px;
+}
+
+aside > dl > dt {
+  width: 100px;
+}
+
+aside > dl > dd::after {
+  display: none;
+}

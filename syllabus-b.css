@@ -1,0 +1,57 @@
+header {
+  color: red
+}
+
+header > h1 {
+  text-align: center;
+}
+
+h1 {
+  color: blue;
+}
+
+header > p {
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 600px) {
+
+  section {
+    display: block;
+    float: left;
+    width: 45%;
+    padding: 2.5%;
+  }
+
+  section:nth-child(2n) {
+    clear: left;
+  }
+
+}
+
+dt {
+  font-weight: bold;
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+dd {
+  display: inline;
+  text-align: left;
+}
+
+dd::after {
+  content: "";
+  display: block;
+}
+
+aside {
+  border: 1px solid grey;
+  float: right;
+  padding: 5px 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,60 @@
+h1 {
+  color: blue;
+}
+
+header {
+  color: red
+}
+
+header > h1 {
+  text-align: center;
+}
+
+header > h1 {
+  text-align: center;
+}
+
+header > p {
+  text-align: center;
+  font-size: 16pt;
+  font-weight: bold;
+}
+
+article {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+#contact-info {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: white;
+  border: 1px solid black;
+  padding-left: 10px;
+}
+
+section {
+  width: 50%;
+  padding: 0 10px;
+  border: 1px dashed black;
+}
+
+dt {
+  font-weight: bold;
+  display: inline-block;
+  width: 200px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+dd {
+  display: inline;
+  text-align: left;
+}
+
+dd::after {
+  content: "";
+  display: block;
+}

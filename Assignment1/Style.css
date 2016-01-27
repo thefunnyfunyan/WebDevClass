@@ -1,0 +1,19 @@
+.Heading{
+  color: white;
+  text-shadow: 2px 2px black
+}
+.Explanation{
+  color: black;
+}
+.wood{
+  color: brown;
+}
+.metal{
+  color: grey;
+}
+.binary{
+  color: green;
+}
+body{
+  background-color: #ff1aff;
+}

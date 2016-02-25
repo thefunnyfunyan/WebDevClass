@@ -1,0 +1,6 @@
+{"Galleries" : [ {"name" : "First Gallery", "path" : "/FirstGallery", "description" : "The First Gallery", "Images" : [{"path" : "FirstGallery/Dog.jpg", "caption": "silly dog"},
+                                                                                                        {"path" : "FirstGallery/JackSparrow.jpg", "caption": "ole Captain jack"},
+                                                                                                        {"path" : "FirstGallery/ouch.jpg", "caption": "Thats Gotta Hurt"},
+                                                                                                        {"path" : "FirstGallery/WeirdOwl.jpg", "caption": "silly owl"}]}
+            ]
+}

@@ -47,7 +47,7 @@ var post = {
         fields.author,
         fields.postContent
       );
-      post.show(req, res)
+      post.show(req, res, )
     });
   },
 
@@ -88,7 +88,9 @@ var post = {
         res.writeHead(500, {'Content-Type':'text/html'});
         res.end('<h1>Server Error</h1>');
       }
-      post.index(req, res);
+      res.writeHead(301, {"Content-Type":"text/html", "Location":"/post"});
+      res.end("This page has moved to <a href='/equipment'>equipment</a>");
+      //post.index(req, res);
     })
   }
 

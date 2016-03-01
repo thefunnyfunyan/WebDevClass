@@ -1,4 +1,4 @@
-<form action="<%= params? '/post/7' : '/post'%>" method="POST" autocomplete="off">
+<form action="<%= params? '/post/' + params.id : '/post'%>" method="POST" autocomplete="off">
   <p>
     <label for="title">Title:</label>
     <input name="title" type ="text" value="<%= params? params.title: ''%>"/>

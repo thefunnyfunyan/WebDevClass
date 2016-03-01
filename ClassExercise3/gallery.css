@@ -1,0 +1,8 @@
+.gallery {
+  clear: both;
+}
+
+.gallery > img {
+  width: 300px;
+  float: left;
+}

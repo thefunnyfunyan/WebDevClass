@@ -1,0 +1,6 @@
+<h1>List of Equipment</h1>
+<ul>
+  <%= params.equipment.forEach(equip) {return "<li>
+    "+equip.name+"
+  </li>";}).join("");%>
+</ul>

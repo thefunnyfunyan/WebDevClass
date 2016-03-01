@@ -17,3 +17,15 @@
 body{
   background-color: #ff1aff;
 }
+img{
+  height: 180px;
+}
+.SectionText{
+  display: inline-block;
+}
+.SectionPicture{
+  display: inline-block;
+}
+.section{
+  margin: auto;
+}

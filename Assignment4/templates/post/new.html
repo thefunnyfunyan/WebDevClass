@@ -1,0 +1,17 @@
+<form action="<%= params? '/post/7' : '/post'%>" method="POST" autocomplete="off">
+  <p>
+    <label for="title">Title:</label>
+    <input name="title" type ="text" value="<%= params? params.title: ''%>"/>
+  </p>
+  <p>
+    <label for="author">Author:</label>
+    <input name="author" type ="text" value="<%= params? params.author: ''%>"/>
+  </p>
+  <p>
+    <label for="postContent">Post:</label>
+    <input name="postContent" type ="text" value="<%= params? params.postContent: ''%>"/>
+  </p>
+  <p>
+    <input type="submit" value="<%=params? 'Update': 'Publish'%>"  />
+  </p>
+</form>

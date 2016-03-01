@@ -81,7 +81,7 @@ function addResource(resource, controller) {
 // Routes a request to the matching callback function
 // using the mappings stored in the route table
 function route(request, response) {
-  console.log("running");
+  console.log(routeMap);
   var verb = request.method.toLowerCase();
   var path = request.url.split("?")[0];
   // Iterate through the routeMap looking for a matching route

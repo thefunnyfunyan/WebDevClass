@@ -1,0 +1,14 @@
+<h1><%= params? params.title: 'New Wiki'%></h1>
+<form action="<%params? '/page/' + params.id + '/update' : '/page'%>" method="post" autocomplete="off">
+    <p>
+        <label for="title">Title</label>
+        <input name="title" type="text" value="<%=params? params.title : ''%>"/>
+    </p>
+    <p>
+        <label for="content">Content</label>
+        <textarea rows="50" cols="50" name="content" type="text"><%=params? params.content: ''%></textarea>
+    </p>
+    <p>
+        <input type="submit" value="Publish">
+    </p>
+</form>

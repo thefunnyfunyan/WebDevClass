@@ -1,4 +1,5 @@
-var fs = require('fs');
+var fs = require('fs'),
+    marked = require('marked');
 
 // Cache templates in memory
 var _templates = {};

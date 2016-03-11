@@ -1,0 +1,7 @@
+<div class="user-stats">
+    <div class="username"><%=params.name%></div>
+    <form>
+        <button type="submit" formAction="./user/<%=params.banned==0? 'ban': 'unban'%>/<%=params.id%>" formmethod="post"><%=params.banned==0? 'Ban User': 'Unban User'%></button>
+        <button type="submit" formAction="./user/<%=params.admin==0? 'promote': 'demote'%>/<%=params.id%>" formmethod="post"><%=params.admin==1? 'Take Admin Rights' : 'Make User Admin'%></button>
+    </form>
+</div>

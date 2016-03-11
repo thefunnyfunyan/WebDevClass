@@ -1,0 +1,13 @@
+<% content.title = params.title %>
+<h1><%=params.title%></h1>
+<div class="pageSelector">
+    <button id="pagebutton" >Go To Chat Page</button>
+</div>
+<div class="contentPage" style="display: block">
+    <a href="/page/<%=params.id%>/edit">edit</a>
+    <%= partial('wikiPages/_wikiEntry', params); %>
+</div>
+<div class="chatpage" style="display: none">
+    <%= partial('wikiPages/_wikiChat', params);%>
+</div>
+<script src="/contentPage.js"></script>

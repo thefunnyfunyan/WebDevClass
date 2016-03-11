@@ -1,0 +1,10 @@
+<% content.title = "Blog Home" %>
+<div class  = "Blog__Title">
+  <h1>This is Brandon's Blog!</h1>
+</div>
+<div class = "Body">
+  <div class = "New_Blog">
+    <a href ="post/new">New Blog</a>
+  </div>
+  <%= partial('post/_post', params.post); %>
+</div>

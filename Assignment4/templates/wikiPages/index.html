@@ -1,0 +1,18 @@
+<% content.title = "Wiki" %>
+<h1>Assignment4 Wiki Pages</h1>
+<div class="Wiki Articles">
+    <div class="newWiki">
+        <button id="newWikiButton" href="/page/new">Create New Wiki</button>
+    </div>
+    <div class="newUser">
+        <button id="newUserButton">Sign Up</button>
+    </div>
+    <div class="login">
+        <button id="loginButton">Login</button>
+    </div>
+    <div class="wikiList">
+        <h3>Wikis</h3>
+        <%= partial('wikiPages/_pageLink', params.pages); %>
+    </div>
+</div>
+<script src="/indexPage.js"></script>

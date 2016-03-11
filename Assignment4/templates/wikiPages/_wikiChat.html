@@ -1,0 +1,15 @@
+<h3>Chat</h3>
+<div class="currentChat">
+    <%=marked(params.chat)%>
+</div>
+<button id="newChat">Add to the Conversation!</button>
+<div class="newChat" style="display: none">
+    <form action="/page/<%=params.id%>/addChat" method="post" autocomplete="off">
+        <p>
+            <textarea rows="50" cols="50" name="content" type="text"><%=params.chat%></textarea>
+        </p>
+        <p>
+            <input type="submit" value="Publish">
+        </p>
+    </form>
+</div>

@@ -1,0 +1,25 @@
+<div class = "Body">
+  <div class = "Blog__Heading">
+    <h1><%=params.post.title %></h1>
+    <h5><%=params.post.author%></h5>
+  </div>
+  <div class="Edit_Button">
+    <a href="./<%=params.post.id%>/edit">Edit this post</a>
+  </div>
+  <div class = "Blog__Content">
+    <p>
+      <%=params.post.postContent%>
+    </p>
+  </div>
+  <div class = "Delete_Button">
+    <a href="./<%=params.post.id%>/delete">Delete This Post</a>
+  </div>
+  <div class = "Blog__Comments">
+      <h4>COMMENTS</h2>
+      <a id="CommentButton">Add Comment</a>
+      <form class ="New Comment" id ='Publish' action='./post/<%=params.post.id%>/comments/'>
+      </form>
+        <%= partial('comments/_comments', params.comms); %>
+  </div>
+</div>
+<script src="/postPage.js"></script>

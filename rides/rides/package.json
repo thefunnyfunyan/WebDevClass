@@ -1,0 +1,14 @@
+{
+  "name": "rides",
+  "version": "1.0.0",
+  "description": "A ride-sharing app",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "author": "Nathan Bean",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}

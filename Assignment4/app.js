@@ -5,6 +5,22 @@ var express = require('express'),
     http = require('http').Server(app),
     passport = require('passport');
 
+app.use(function(req, res, next){
+  var auth = req.headers.authorization;
+  if(auth){
+    var b = new Buffer(auth.split(' ')[1],'base64'),
+        s = b.toString(),
+        creds = s.split(':'),
+        username = creds[0],
+        pass = creds[1];
+    console.log(username + ' ' + pass);
+    next()
+  }else{
+    res.writeHead(401, {'WWW-Authenticate':'Basic'});
+    res.end();
+  }
+})
+
 app.use(express.static('public'));
 
 app.get('/', function(req, res){
@@ -37,6 +53,11 @@ app.post('/page/:id/edit', function(req, res){
     res.redirect('/page/' + req.params.id);
 })
 
+app.post('/page/new', function(req, res){
+  wikiPages.create(req, res);
+  res.redirect('/');
+})
+
 app.post("/page", function(req, res){
     wikiPages.create(req, res);
     res.redirect('/');
@@ -46,8 +67,11 @@ app.post("/page/:id/addChat", function(req, res){
     wikiPages.addChat(req, res, req.params)
 });
 
+
+app.all('*', function(req, res) {
+    res.end("BAAAAD");
+})
+
 http.listen(8080, function(){
     console.log("listening on port 8080...");
 });
-
-

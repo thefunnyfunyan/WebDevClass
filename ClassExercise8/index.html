@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+  <title>Canvas Example</title>
+  <style>
+  canvas{
+    border: 1px solid black;
+    }</style>
+  <body>
+    <canvas id="mycanvas" width=1028 height=720></canvas>
+    <script>
+      var canvas = document.getElementById("mycanvas");
+      var context = canvas.getContext("2d");
+
+      context.beginPath();
+      context.moveTo(400,400);
+      context.arc(400, 400, 225, 0, 1/6*Math.PI);
+      context.fillStyle ="red";
+      context.stroke();
+      context.fill();
+
+
+      context.beginPath();
+      context.moveTo(400,400);
+      context.arc(400, 400, 200, 1/6*Math.PI, 3/4*Math.PI );
+      context.lineTo(400, 400);
+      context.fillStyle ="green";
+      context.stroke();
+      context.fill();
+
+
+      context.beginPath();
+      context.moveTo(400,400);
+      context.arc(400, 400, 175, 3/4*Math.PI,0 );
+      context.lineTo(400, 400);
+      context.fillStyle ="blue";
+      context.stroke();
+      context.fill();
+
+      context.font = '30px Arial';
+      context.strokeText("Seniors", 340, 320);
+
+
+      context.font = '30px Arial';
+      context.strokeText("Juniors", 350, 500);
+
+
+      context.font = '30px Arial';
+      context.strokeText("S. Seniors", 430, 435);
+
+    </script>
+  </body>
+</head>
+</html>
